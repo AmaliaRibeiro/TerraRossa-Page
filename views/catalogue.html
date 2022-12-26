@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9caded27f0.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" type="img/png" href="/img/logo-web-icon.png">
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Catalogo</title>
+</head>
+
+<body>
+  <header>
+      <!-- seccion barra de navegacion -->
+      <nav class="nav-bar">
+        <a href="/"><img class="logo" src="/img/logo-w.png" /></a>
+        <div id="navMenu" class="nav-hamburguer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-menu-list">
+          <li class="nav-menu-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="nav-link" href=/catalogue>Catálogo</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="nav-link" href="/allBlogs">Blog</a>
+          </li>
+        <!-- <li class="nav-menu-item">
+              <a class="nav-link" href="/content/contact">Contacto</a>
+            </li> -->
+            <div class="icon-2">
+              <li class="nav-menu-item">
+                <div class="search-area nav-link">
+                  <form action="/product/busqueda" method="GET" id="searchForm">
+                    <input type="text" name="searchValue" id="search-input" placeholder="¿Que deseas buscar?...">
+                  </form>
+                  <div id="sign">
+                    <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                </div>
+              </li>
+              
+              <li class="nav-menu-item">
+                <a class="nav-link" href="/product/product-cart"><i class="fa-solid fa-cart-shopping"></i></a>
+              </li>
+              <li class="nav-menu-item with-submenu">
+                <div class="user-submenu"> 
+                  <img src='/img/profileImages/admin@admin.com_1657413736084.png' class='imgRedonda' />
+                 <i class="fa-solid fa-user"></i>
+                  <i class="fa fa-caret-down"></i></div>
+                <ul class="submenu">
+                  
+                      <!--<li><a class="nav-link" href="/users/edit-user/">Editar Perfil</a></li>
+                      <li><a class="nav-link" href="/users/admin">Administración</a></li>
+                      <li><a class="nav-link" href="/users/logout">Cerrar Sesion</a></li>
+                    
+                      <li><a class="nav-link" href="/users/edit-user/">Editar Perfil</a></li>
+                      <li><a class="nav-link" href="/users/logout">Cerrar Sesion</a></li>-->
+                    
+                  <li><a class="nav-link" href="/users/login">Iniciar Sesion</a></li>
+                  <li><a class="nav-link" href="/users/register">Registrarme</a></li>
+                  
+                </ul>
+              </li>
+              <!-- <li class="nav-menu-item admin-icon">
+                <a class="nav-link" href="/users/admin"><i class="fa-solid fa-address-card"></i></a>
+              </li> -->
+            </div>
+          </ul>
+        </nav>
+    </header>
+    
+    <section class="catalogo">
+      <div class="catalogo__headertitle">
+       <h1 class="catalogo__title"><strong>Catálogo</strong></h1>
+      </div>
+      <div class="catalogo__queries">
+        <div class="container__filtro">
+          <div class="container__filtro_title" id="filter"><h2>FILTROS</h2><i class="fa-solid fa-list"></i></div>        
+      <div id="show">
+        <ul class="filter-ul">
+          <li><p class="filter-tittle">Precio</p></li>
+          <div class="li-flex">
+          <li class="li-not num">
+              <input type="range" id="precio" min="5000" max="20000" step="5000" value="5000" list="tickmarks">
+              <output id="outvol" name="outvol" for="vol">Hasta 5.000</output> 
+          <datalist id="data">
+            <option value="5000" class="value">
+            <option value="10000" class="value">
+            <option value="15000" class="value">
+            <option value="20000" class="value">
+          </datalist>
+            
+          </li>
+        </div>
+        </ul>
+        <ul class="filter-ul" id="pri">
+          <li><p class="filter-tittle">Tipo</p></li>
+            <li class="li-not"><input type="checkbox" id="filterType" name="tintos" value="2"><p>Tintos</p></li>  
+           <li class="li-not"><input type="checkbox" id="filterType" name="blancos" value="3"><p>Blancos</p></li>  
+            <li class="li-not"><input type="checkbox" id="filterType" name="especiales" value="4"><p>Especiales</p></li>  
+            <li class="li-not"><input type="checkbox" id="filterType" name="espumantes" value="5"><p>Espumantes</p></li> 
+            <!-- <li class="li-not submit"><button >Buscar</button></li> -->
+        </ul>
+        <ul class="">
+        </ul>
+      </div>
+        </div>
+        <div class="catalogo__conteiner" id="divSearch">
+              <article class="cata__products">
+              <img class="cataimg__product" src="/img/productImg/blend.png" alt="aqui va la foto">
+              <p class="cataname__product"></p>
+              <p class="cataprecio__product"></p>
+              
+                <form class="cartForm" id="" action="" method="post">
+                  <div class="container__buttons">
+                    <button type="submit" class="add-to-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <a class="cata__eye" id="add-item" href="/product/product-detail/" target=""><i class="fa-regular fa-eye"></i></a>
+                  </div>
+                </form>
+              </article>
+            
+            <div class="nav-alert">
+              <h1 class=""><strong>No se encontraron resultados para su búsqueda <span></span></strong></h1>
+            </div>
+          
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <section class="container">
+          <div class="row">
+            <article class="footer-col">
+              <h4>Ayuda</h4>
+              <ul>
+                <li><a href="/content/faq">Preguntas frecuentes</a></li>
+                <li><a href="/content/terminos">Términos y condiciones</a></li>
+              </ul>
+            </article>
+            
+            <article class="footer-col">
+              <h4>Redes</h4>
+              <div class="social-links">
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="https://twitter.com/" target="_blank"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="https://instagram.com/" target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="https://linkedin.com/" target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </article>
+            <img class="footer-img" src="/img/qr-code.png" alt="Código Qr" />
+          </div>
+          <p class="text-foo">
+            BEBER CON MODERACIÓN, PROHIBIDA SU VENTA A MENORES DE 18 AÑOS
+          </p>
+          <p class="copy">Terra Rossa 2022 &copy;, todos los derechos reservados</p>
+        </section>
+        
+        <script>
+            const navMenu = document.querySelector("#navMenu");
+            const navToggle = document.querySelector(".nav-menu-list");
+        
+            navMenu.addEventListener("click", () => {
+              navMenu.classList.toggle("active");
+            });
+            navMenu.addEventListener("click", () => {
+              navToggle.classList.toggle("nav-menu_visible");
+            });
+        
+          </script>
+          <script>
+            // activar y desactivar buscador 
+            const searchIcon = document.getElementById("search-icon");
+            const searchArea = document.getElementById("search-input");
+            const signBtn = document.getElementById("sign");
+        
+            searchIcon.addEventListener("click", () => {
+              signBtn.classList.toggle("active-search");
+              searchArea.classList.toggle("active-search");
+            });
+          </script>
+        
+     </footer>
+  
+    <script src="/JS/filtroCatalogo.js"></script>
+    <script src="/JS/addItemToCart.js"></script>
+  </body>
+  
+  </html>
