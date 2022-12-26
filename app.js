@@ -13,7 +13,7 @@ app.listen(3030, ()=>{
 app.set("views", path.join(__dirname, "views"));*/
 
 app.get('/', (req, res)=>{
-    res.sendFile(path.resolve(__dirname, './views/index.html'));
+    res.sendFile(path.resolve(__dirname, './index.html'));
 })
 
 app.get('/catalogue', (req, res)=>{
