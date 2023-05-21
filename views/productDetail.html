@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+          src="https://kit.fontawesome.com/9caded27f0.js"
+          crossorigin="anonymous"
+        ></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="icon" type="img/png" href="/img/logo-web-icon.png">
+        <link rel="stylesheet" href="/css/styles.css" />
+        <title>Terra Rossa</title>
+    <title>Detalle de Producto - Terra Rossa</title>
+</head>
+<body>
+    <!-- seccion barra de navegacion -->
+    <header>
+        <!-- seccion barra de navegacion -->
+        <nav class="nav-bar">
+            <a href="/"><img class="logo" src="/img/logo-w.png" /></a>
+            <div id="navMenu" class="nav-hamburguer">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="nav-menu-list">
+              <li class="nav-menu-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-menu-item">
+                <a class="nav-link" href="/catalogue">Catálogo</a>
+              </li>
+              <li class="nav-menu-item">
+                <a class="nav-link" href="/allBlogs">Blog</a>
+              </li>
+              <!-- <li class="nav-menu-item">
+                  <a class="nav-link" href="/content/contact">Contacto</a>
+                </li> -->
+              <div class="icon-2">
+                <li class="nav-menu-item">
+                  <div class="search-area nav-link">
+                    <form action="/product/busqueda" method="GET" id="searchForm">
+                      <input type="text" name="searchValue" id="search-input" placeholder="¿Que deseas buscar?...">
+                    </form>
+                    <div id="sign">
+                      <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                  </div>
+                </li>
+                
+                <li class="nav-menu-item">
+                  <a class="nav-link" href="/product/product-cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <li class="nav-menu-item with-submenu">
+                  <div class="user-submenu"> 
+                    <img src='/img/profileImages/admin@admin.com_1657413736084.png' class='imgRedonda' />
+                   <i class="fa-solid fa-user"></i>
+                    <i class="fa fa-caret-down"></i></div>
+                  <ul class="submenu">
+                    
+                        <!--<li><a class="nav-link" href="/users/edit-user/">Editar Perfil</a></li>
+                        <li><a class="nav-link" href="/users/admin">Administración</a></li>
+                        <li><a class="nav-link" href="/users/logout">Cerrar Sesion</a></li>
+                      
+                        <li><a class="nav-link" href="/users/edit-user/">Editar Perfil</a></li>
+                        <li><a class="nav-link" href="/users/logout">Cerrar Sesion</a></li>-->
+                      
+                    <li><a class="nav-link" href="/login">Iniciar Sesion</a></li>
+                    <li><a class="nav-link" href="/register">Registrarme</a></li>
+                    
+                  </ul>
+                </li>
+                <!-- <li class="nav-menu-item admin-icon">
+                  <a class="nav-link" href="/users/admin"><i class="fa-solid fa-address-card"></i></a>
+                </li> -->
+              </div>
+            </ul>
+          </nav>
+    </header>
+  <!-- fin seccion barra de navegacion -->
+  
+   <!-- contenedor detalle de producto -->
+   <div class="container__pd">
+    <div class="pd__section">
+        <div class="pd__img" id="zoomC">
+          <img src="/img/productImg/blend.png" alt="imagen del producto">
+        </div>
+        <div class="pd_center">
+          <article class="pd__info">
+            <h2><%= coincidencia.productName%></h2> <span></span>
+            <p><span>AÑO COSECHA: </span> <%= coincidencia.productHarvest%>, <span> VARIEDAD: </span> <%= coincidencia.productVariety%>, <span> CRIANZA: </span> <%= coincidencia.productBreeding%>, <span> POTENCIAL DE GUARDA: </span> <%= coincidencia.productGuard%>.</p>
+            <h3>NOTAS DE CATA</h3>
+            <p><%= coincidencia.productDescription%></p>
+          </article>
+            
+            <form class="pd_buysection" method="POST">
+                <p><span>$ <%= formatter.format(coincidencia.productPrice)%></span></p>
+                <!-- seleccion de producto- incremento y decremento -->
+                <div class="update-quantity-container">
+                  <div class="value-button" id="decrease" value="decrease">-</div>
+                  <input id="cart-id-product" type="hidden" value=" ">
+                  <input type="number" id="inputValue" value="1" name="cantidad"/>
+                  <div class="value-button" id="increase" value="increase">+</div>
+                </div>
+                <!-- fin seleccion de producto- incremento y decremento -->
+                <div class="cart__btn">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <button class="cart-submit" type="submit">agregar al carrito</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+  <!-- fin del contenedor detalle de producto -->
+
+  <!-- footer -->
+  <footer class="footer">
+    <section class="container">
+        <div class="row">
+          <article class="footer-col">
+            <h4>Ayuda</h4>
+            <ul>
+              <li><a href="/preguntasF">Preguntas frecuentes</a></li>
+              <li><a href="/terminos">Términos y condiciones</a></li>
+            </ul>
+          </article>
+          
+          <article class="footer-col">
+            <h4>Redes</h4>
+            <div class="social-links">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="https://twitter.com/" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://instagram.com/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://linkedin.com/" target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </article>
+          <img class="footer-img" src="/img/qr-code.png" alt="Código Qr" />
+        </div>
+        <p class="text-foo">
+          BEBER CON MODERACIÓN, PROHIBIDA SU VENTA A MENORES DE 18 AÑOS
+        </p>
+        <p class="copy">Terra Rossa 2022 &copy;, todos los derechos reservados</p>
+      </section>
+      
+      <script>
+          const navMenu = document.querySelector("#navMenu");
+          const navToggle = document.querySelector(".nav-menu-list");
+      
+          navMenu.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+          });
+          navMenu.addEventListener("click", () => {
+            navToggle.classList.toggle("nav-menu_visible");
+          });
+      
+        </script>
+        <script>
+          // activar y desactivar buscador 
+          const searchIcon = document.getElementById("search-icon");
+          const searchArea = document.getElementById("search-input");
+          const signBtn = document.getElementById("sign");
+      
+          searchIcon.addEventListener("click", () => {
+            signBtn.classList.toggle("active-search");
+            searchArea.classList.toggle("active-search");
+          });
+        </script>
+      
+   </footer>
+  <!--  finfooter -->
+  <script src="/js/addItemFromDetail.js"></script>
+</body>
+</html>

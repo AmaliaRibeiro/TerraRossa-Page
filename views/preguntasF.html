@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+          src="https://kit.fontawesome.com/9caded27f0.js"
+          crossorigin="anonymous"
+        ></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="icon" type="img/png" href="/img/logo-web-icon.png">
+        <link rel="stylesheet" href="/css/styles.css" />
+    <title>FAQ</title>
+  </head>
+  <body>
+      <!-- seccion barra de navegacion -->
+      <header>
+        <!-- seccion barra de navegacion -->
+        <nav class="nav-bar">
+            <a href="/"><img class="logo" src="/img/logo-w.png" /></a>
+            <div id="navMenu" class="nav-hamburguer">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="nav-menu-list">
+              <li class="nav-menu-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-menu-item">
+                <a class="nav-link" href="/catalogue">Catálogo</a>
+              </li>
+              <li class="nav-menu-item">
+                <a class="nav-link" href="/allBlogs">Blog</a>
+              </li>
+              <!-- <li class="nav-menu-item">
+                  <a class="nav-link" href="/content/contact">Contacto</a>
+                </li> -->
+              <div class="icon-2">
+                <li class="nav-menu-item">
+                  <div class="search-area nav-link">
+                    <form action="/product/busqueda" method="GET" id="searchForm">
+                      <input type="text" name="searchValue" id="search-input" placeholder="¿Que deseas buscar?...">
+                    </form>
+                    <div id="sign">
+                      <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                  </div>
+                </li>
+                
+                <li class="nav-menu-item">
+                  <a class="nav-link" href="/product/product-cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <li class="nav-menu-item with-submenu">
+                  <div class="user-submenu"> 
+                    <img src='/img/profileImages/admin@admin.com_1657413736084.png' class='imgRedonda' />
+                   <i class="fa-solid fa-user"></i>
+                    <i class="fa fa-caret-down"></i></div>
+                  <ul class="submenu">
+                    
+                        <!--<li><a class="nav-link" href="/users/edit-user/">Editar Perfil</a></li>
+                        <li><a class="nav-link" href="/users/admin">Administración</a></li>
+                        <li><a class="nav-link" href="/users/logout">Cerrar Sesion</a></li>
+                      
+                        <li><a class="nav-link" href="/users/edit-user/">Editar Perfil</a></li>
+                        <li><a class="nav-link" href="/users/logout">Cerrar Sesion</a></li>-->
+                      
+                    <li><a class="nav-link" href="/login">Iniciar Sesion</a></li>
+                    <li><a class="nav-link" href="/register">Registrarme</a></li>
+                    
+                  </ul>
+                </li>
+                <!-- <li class="nav-menu-item admin-icon">
+                  <a class="nav-link" href="/users/admin"><i class="fa-solid fa-address-card"></i></a>
+                </li> -->
+              </div>
+            </ul>
+          </nav>
+    </header>
+      <!-- fin seccion barra de navegacion -->
+
+    <div class="faq-container">
+      <header>
+        <!-- <section class="cabecera">
+          <a href="/"><img class="cabecera__logo" src="/img/logo-w.png" /></a>
+        </section> -->
+    <main>
+        <div class="cont-gen">
+           <div class="container-acordeon">
+            <h2>Sobre productos:</h2>  
+           <div>
+            <section class="sub-titles">
+                <h3>
+                    ¿Cómo se fabrican los productos?
+                    <span>
+                        <img src="/img/arrow.svg" alt="">
+                    </span>
+                </h3>
+                <p class="desplegar">El vino se obtiene de la fermentación del fruto de la vid y no tiene agregados de ningún tipo, por lo tanto, no es exagerado afirmar que es la más noble y genuina de las bebidas..
+                </p>
+            </section>
+            <section class="sub-titles">
+                <h3>
+                    ¿De dónde vienen los productos?
+                    <span>
+                        <img src="/img/arrow.svg" alt="">
+                    </span>
+                </h3>
+                <p class="desplegar">Nuestros productos vienen desde nuestras fincas ubicadas en la ciudad de Posadas, provincia de Misiones.
+                </p>
+            </section>
+            <section class="sub-titles">
+                <h3>
+                    ¿Utilizan materiales de calidad?
+                    <span>
+                    <img src="/img/arrow.svg" alt="">
+                    </span>
+                </h3>
+                <p class="desplegar">Se utilizan materiales de los más altos estándares de calidad tales cómo : Uvas sanas y maduras.
+                    Levaduras indígenas (naturales de las vides) o seleccionadas (agregadas).
+                    Recipientes donde realizar la fermentación (pueden ser de acero inoxidable, cemento, madera o plástico, dependiendo del estilo de vino que se quiera elaborar).
+                />
+            </section>
+            <section class="sub-titles">
+                <h3>
+                    ¿Tiene garantía el producto?
+                    <span>
+                        <img src="/img/arrow.svg" alt="">
+                    </span>
+                </h3>
+                <p class="desplegar">Tenemos cómo garantía que nuestros productos están certificados bajo los estándares del<a href="https://www.solingesa.com/soluciones/ingenieria-ambiental/eficiencia-energetica/metodologia-para-la-implantacion-de-un-sistema-de-la-eficiencia-energetica-iso-50001.html" target="_blank"> ISO 50001</a>.
+                </p>
+            </section>
+            <section class="sub-titles">
+                <h3>
+                    ¿Cómo puedo consultar el estado de mi pedido?
+                    <span>
+                        <img src="/img/arrow.svg" alt="">
+                    </span>
+                </h3>
+                <p class="desplegar">Para consultar el estado del pedido deberás comunicarte con la empresa de envíos mediante el código que te fue proporcionado al momento de la compra.
+                </p>
+            </section>
+           
+            
+           </div>
+           
+        </div> 
+        <div class="container-acordeon">
+            <h2>Sobre envíos:</h2> 
+            <section class="sub-titles">
+                <h3>
+                    ¿Cuales son los tiempos de envío?
+                    <span>
+                        <img src="/img/arrow.svg" alt="">
+                    </span>
+                </h3>
+                <p class="desplegar">Los tiempos pueden variar de acuerdo a la disponibilidad del producto. Los tiempos de entrega son aproximados y se calculan a partir del envío de la factura
+                    <br>
+                    - Hasta 3 días hábiles para Misiones
+                    <br>
+                    - 8 a 10 días hábiles para Buenos Aires (excepto CABA y GBA).
+                    <br>
+                    - 10 a 15 días hábiles para: Salta, Tucumán, Entre Ríos, San Luis, Santa Fe, Jujuy, Chaco, San Juan, La Pampa, Mendoza, Santiago del Estero y Córdoba.
+                    <br>
+                    - 15 a 20 días hábiles para CABA y GBA, Formosa, Río Negro, Catamarca y La Rioja.
+                    <br>
+                    - 20 a 25 días hábiles para: Corrientes, Misiones, Neuquén, Chubut y Santa Cruz..
+                    
+                </p>
+            </section>
+            <section class="sub-titles">
+                <h3>
+                    ¿Qué hago si quiero devolver un producto?
+                    <span>
+                        <img src="/img/arrow.svg" alt="">
+                    </span>
+                </h3>
+                <p class="desplegar">Los pedidos se pueden cancelar sin coste alguno hasta el momento en que el envío se hace efectivo.  Las devoluciones pueden hacerse hasta 7 días hábiles a partir de la recepción del producto según las especificaciones que siguen.
+                </p>
+            </section>
+            <section class="sub-titles">
+                <h3>
+                    ¿Que medios de pago aceptan?
+                    <span>
+                        <img src="/img/arrow.svg" alt="">
+                    </span>
+                </h3>
+                <p class="desplegar">Podrás pagar a través de Mercado Pago o tarjetas de crédito (Visa, American Express y Mastercard).
+                </p>
+            </section>
+            <section class="sub-titles">
+                <h3>
+                    ¿Quién se encarga de mi pedido una vez enviado?
+                    <span>
+                        <img src="/img/arrow.svg" alt="">
+                    </span>
+                </h3>
+                <p class="desplegar">La empresa encargada de la logistica es <a href="https://www.correoargentino.com.ar/" target="_blank"> Correo Argentino</a>.
+                </p>
+            </section>
+            <section class="sub-titles">
+                <h3>
+                    ¿Que sucede con mi envío si cambio de dirección?
+                    <span>
+                        <img src="/img/arrow.svg" alt="">
+                    </span>
+                </h3>
+                <p class="desplegar">Si sos el profe nico o adrian y ves esto la te lo llevamos hasta tu casa nueva.
+                </p>
+            </section>
+
+        </div>
+        </div>
+        
+        </div>
+    </main>
+    <footer class="footer">
+        <section class="container">
+            <div class="row">
+              <article class="footer-col">
+                <h4>Ayuda</h4>
+                <ul>
+                  <li><a href="/preguntasF">Preguntas frecuentes</a></li>
+                  <li><a href="/terminos">Términos y condiciones</a></li>
+                </ul>
+              </article>
+              
+              <article class="footer-col">
+                <h4>Redes</h4>
+                <div class="social-links">
+                  <a href="https://www.facebook.com/" target="_blank"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="https://twitter.com/" target="_blank"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a href="https://instagram.com/" target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="https://linkedin.com/" target="_blank"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+              </article>
+              <img class="footer-img" src="/img/qr-code.png" alt="Código Qr" />
+            </div>
+            <p class="text-foo">
+              BEBER CON MODERACIÓN, PROHIBIDA SU VENTA A MENORES DE 18 AÑOS
+            </p>
+            <p class="copy">Terra Rossa 2022 &copy;, todos los derechos reservados</p>
+          </section>
+          
+          <script>
+              const navMenu = document.querySelector("#navMenu");
+              const navToggle = document.querySelector(".nav-menu-list");
+          
+              navMenu.addEventListener("click", () => {
+                navMenu.classList.toggle("active");
+              });
+              navMenu.addEventListener("click", () => {
+                navToggle.classList.toggle("nav-menu_visible");
+              });
+          
+            </script>
+            <script>
+              // activar y desactivar buscador 
+              const searchIcon = document.getElementById("search-icon");
+              const searchArea = document.getElementById("search-input");
+              const signBtn = document.getElementById("sign");
+          
+              searchIcon.addEventListener("click", () => {
+                signBtn.classList.toggle("active-search");
+                searchArea.classList.toggle("active-search");
+              });
+            </script>
+          
+       </footer>
+    <script src="/js/acordeon.js">
+    </script>
+</body>
+
+</html> 
