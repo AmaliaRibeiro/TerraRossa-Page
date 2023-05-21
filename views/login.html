@@ -27,23 +27,23 @@
         <form class="formulario" action="/users/login" method="POST">
           <h2 class="create-account">INICIAR SESION</h2>
           <label>Email</label>
-          <input type="email" name="email" id="email" value="<%= (locals.old && old.email ? old.email : '') %> " />
-          <% if(locals.errors && errors.email) { %>
+          <input type="email" name="email" id="email" value=" " />
+          
             <p class="form-warning">
-              <%= errors.email.msg %>
+              
             </p>
-            <%} else {%>
+            
               <div id="er" class="err"></div>
-              <% } %>
+              
                 <label>Contraseña</label>
                 <input type="password" name="password" id="password" />
-                <% if(locals.errors && errors.password) { %>
+                
                   <p class="form-warning">
-                    <%= errors.password.msg %>
+                   
                   </p>
-                  <%} else {%>
+                 
                     <div id="er2" class="err"></div>
-                    <% } %>
+                   
                       <label>Recordarme</label>
                       <div class="remember">
                         <input type="checkbox" name="recordarme">
@@ -55,7 +55,7 @@
           <div class="mensaje">
             <h2>BIENVENIDO DE NUEVO</h2>
             <p>¿Aún no tenes cuenta? Creá una cuenta para iniciar sesión</p>
-            <a href="/users/register"><button class="sign-in-btn">REGISTRARSE</button></a>
+            <a href="/register"><button class="sign-in-btn">REGISTRARSE</button></a>
           </div>
         </div>
       </section>

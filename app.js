@@ -23,3 +23,16 @@ app.get('/catalogue', (req, res)=>{
 app.get('/allBlogs', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/allBlogs.html'));
 })
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/login.html'));
+})
+
+app.get('/register', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/register.html'));
+})
+
+// Ruta 404 
+app.use((req, res, next)=>{
+    res.status(404).render('not-found')
+});
